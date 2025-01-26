@@ -9,7 +9,7 @@ The project aims to create an automated SQL query generation system that interpr
     * Each document is then transformed into a vector embedding using Hugging Face Transformer models, resulting in a vector database (via Chroma). This vector database enables similarity search, where user queries can be vectorized and matched with stored documents to find relevant resutls based on content similarity alone.
     * This step allows the project to retrieve relevant documents quickly based on similarity without SQL, serving as a basic retrieval layer.
 3. Incorporating LLMs for SQL Generation:
-    * With the Groq Language model (LLM) integrated through LangChain, the project advances to a more sophisticated pipeline. Here, the LLM is leveraged to interpret the user's natural language question, generate a SQL query based on the database schema, and retrieve relevant data:
+    * With the Large Language model (LLM, here Llama - 3.3 70B) integrated through LangChain using Groq extension, the project advances to a more sophisticated pipeline. Here, the LLM is leveraged to interpret the user's natural language question, generate a SQL query based on the database schema, and retrieve relevant data:
         * Step 1: The user's question is passed to the Groq model alongside the schema as context. The LLM translates the question into a SQL query, ensuring it's accurate and schema-compliant.
         * Step 2: The generated SQL query is then executed on the database to retrieve precise, structured information.
     * This approach provides users with contextually rich, SQL-based responses, leveraging the database's structure to provide accurate answers. 
